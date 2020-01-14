@@ -18,6 +18,8 @@ class Core
       $this->currentController = $controllerName;
       unset($url[0]);
     }
+    require_once '../app/controllers/'.$this->currentController.'.php';
+    $this->currentController = new $this->currentController;
   }
   // get url data
   public function getUrl(){
