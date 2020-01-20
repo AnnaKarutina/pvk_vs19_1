@@ -1,7 +1,7 @@
 <?php
 
 
-class Posts
+class Posts extends Controller
 {
 
   /**
@@ -12,8 +12,7 @@ class Posts
     echo 'Posts class loaded';
   }
 
-  public function about($id){
-    echo 'about method is loaded<br>';
-    echo 'post '.$id.' is printed<br>';
+  public function index(){
+    $this->view('index');
   }
 }
