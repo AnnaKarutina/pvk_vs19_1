@@ -12,10 +12,8 @@ class Core
   public function __construct()
   {
     $url = $this->getUrl();
-    $controllerName = ucwords($url[0]);
-    $controllerFile = '../app/controllers/'.$controllerName.'.php';
-    if(file_exists($controllerFile)){
-      $this->currentController = $controllerName;
+    if(file_exists('../app/controllers/'.ucwords($url[0]).'.php')){
+      $this->currentController = ucwords($url[0]);
       unset($url[0]);
     }
     require_once '../app/controllers/'.$this->currentController.'.php';
