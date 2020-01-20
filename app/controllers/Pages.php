@@ -9,10 +9,10 @@ class Pages extends Controller
    */
   public function __construct()
   {
-    echo 'Pages class is loaded';
   }
 
   public function index(){
-    echo 'index method is loaded<br>';
+    $data = array('title' => 'Pages');
+    $this->view('pages/index', $data);
   }
 }

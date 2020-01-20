@@ -13,6 +13,10 @@ class Posts extends Controller
   }
 
   public function index(){
-    $this->view('index');
+    $data = array(
+      'title' => 'Welcome to Posts',
+      'content' => 'Posts view is loaded'
+    );
+    $this->view('posts/index', $data);
   }
 }
