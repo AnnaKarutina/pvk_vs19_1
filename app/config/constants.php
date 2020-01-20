@@ -4,7 +4,7 @@ define('PROJECT_NAME', 'pvk');
 // App Root Directory
 define('APPROOT', dirname(dirname(__FILE__)) );
 // URL Root
-define('URLROOT', $_SERVER['HTTP_HOST'].'/'.PROJECT_NAME);
+define('URLROOT', 'http://'.$_SERVER['HTTP_HOST'].'/'.PROJECT_NAME);
 
 // database config
 define('DB_HOST', 'localhost');
