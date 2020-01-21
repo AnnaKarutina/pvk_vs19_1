@@ -9,7 +9,7 @@ class Posts extends Controller
    */
   public function __construct()
   {
-    echo 'Posts class loaded';
+    $this->postModel = $this->model('Post');
   }
 
   public function index(){
