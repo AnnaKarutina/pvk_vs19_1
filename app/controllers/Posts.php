@@ -21,4 +21,8 @@ class Posts extends Controller
     );
     $this->view('posts/index', $data);
   }
+
+  public function add(){
+    $this->postModel->addPost();
+  }
 }

@@ -17,4 +17,11 @@ class Post
     return $this->db->getAll();
   }
 
+  public function addPost(){
+    $this->db->query('INSERT INTO posts SET title=:title, content=:content');
+    $this->db->bind('title', 'Next Post');
+    $this->db->bind('content', 'Next Post Content');
+    $this->db->execute();
+  }
+
 }
